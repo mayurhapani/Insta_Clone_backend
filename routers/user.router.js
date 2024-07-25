@@ -12,6 +12,10 @@ const {
   removeProfilePic,
 } = require("../controllers/user.controller");
 
+uRouter.get("/", (req, res) => {
+  res.send("hiii");
+});
+
 uRouter.post("/signup", signup);
 uRouter.post("/signin", login);
 
