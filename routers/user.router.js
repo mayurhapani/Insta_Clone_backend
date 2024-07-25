@@ -13,7 +13,7 @@ const {
 } = require("../controllers/user.controller");
 
 uRouter.get("/", (req, res) => {
-  res.send("hiii");
+  res.send("Hello This Is Insta Clone Tastings!");
 });
 
 uRouter.post("/signup", signup);
