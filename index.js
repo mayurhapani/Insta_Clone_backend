@@ -13,7 +13,7 @@ const ouRouter = require("./routers/otherUser.router");
 
 app.use(
   cors({
-    origin: "https://insta-clone-frontend-rho.vercel.app",
+    origin: "https://insta-clone-frontend-five.vercel.app",
     credentials: true,
   })
 );
