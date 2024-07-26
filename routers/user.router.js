@@ -12,10 +12,6 @@ const {
   removeProfilePic,
 } = require("../controllers/user.controller");
 
-uRouter.get("/", (req, res) => {
-  res.send("Hello This Is Insta Clone Tastings!");
-});
-
 uRouter.post("/signup", signup);
 uRouter.post("/signin", login);
 
