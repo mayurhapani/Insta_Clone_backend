@@ -16,7 +16,7 @@ const isAuth = async (req, res, next) => {
     req.user = user;
     next();
   } catch (error) {
-    return res.status(401).json({ message: error.message });
+    return res.status(401).json({ message: "middleware : " + error.message });
   }
 };
 
