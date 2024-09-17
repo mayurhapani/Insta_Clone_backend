@@ -1,0 +1,1 @@
+start command = npm start
