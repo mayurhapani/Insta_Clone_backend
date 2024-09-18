@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const { extractPublicId, deleteImageByUrl } = require("../public/javascripts/image_functions");
 const postModel = require("../models/post.model");
 const defaultImag =
-  "https://res.cloudinary.com/instaclone21/image/upload/v1721210287/users/u0qrfanxqztl61j37odp.png";
+  "https://res.cloudinary.com/mayurcloud21/image/upload/v1721210287/users/u0qrfanxqztl61j37odp.png";
 
 const signup = async (req, res) => {
   try {

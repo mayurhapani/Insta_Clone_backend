@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
   image: {
     type: String,
     default:
-      "https://res.cloudinary.com/instaclone21/image/upload/v1721210287/users/u0qrfanxqztl61j37odp.png",
+      "https://res.cloudinary.com/mayurcloud21/image/upload/v1721210287/users/u0qrfanxqztl61j37odp.png",
   },
   followers: [
     {
