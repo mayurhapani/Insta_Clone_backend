@@ -11,12 +11,30 @@ const uRouter = require("./routers/user.router");
 const pRouter = require("./routers/post.router");
 const ouRouter = require("./routers/otherUser.router");
 
-app.use(
-  cors({
-    origin: "https://insta-clone-frontend-sand.vercel.app",
-    credentials: true,
-  })
-);
+const allowedOrigins = [
+  "https://insta-clone-frontend-five.vercel.app",
+  "https://insta-clone-frontend-sand.vercel.app",
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true, // Enable if you need to send cookies or authorization headers
+};
+
+app.use(cors(corsOptions));
+
+// app.use(
+//   cors({
+//     origin: "https://insta-clone-frontend-sand.vercel.app",
+//     credentials: true,
+//   })
+// );
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
