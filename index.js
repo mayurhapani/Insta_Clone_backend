@@ -24,17 +24,11 @@ const corsOptions = {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  credentials: true, // Enable if you need to send cookies or authorization headers
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
 
-// app.use(
-//   cors({
-//     origin: "https://insta-clone-frontend-sand.vercel.app",
-//     credentials: true,
-//   })
-// );
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
